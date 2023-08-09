@@ -13,9 +13,7 @@ node {
             sh 'npm i sonarqube-scanner'
             sh 'npm run sonar'
 
-            // Using credentials for publishing
-            withCredentials([usernamePassword(credentialsId: '510ef335-a4c7-4101-aa12-6a9e5fd3e410', usernameVariable: 'admin', passwordVariable: 'admin123')]) {
-                sh "npm publish --registry=http://18.221.2.79:8081/repository/nodejs-repo/ --force --user=$NPM_REGISTRY_USERNAME --password=$NPM_REGISTRY_PASSWORD"
+            nexusArtifactUploader artifacts: [[artifactId: 'nhs-app', classifier: '', file: '.', type: 'tgz']], credentialsId: '510ef335-a4c7-4101-aa12-6a9e5fd3e410', groupId: 'in.nhs-app', nexusUrl: '18.221.2.79:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'nodejs-repo', version: '1.0.0'
             }
         }
     }
