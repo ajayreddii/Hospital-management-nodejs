@@ -14,6 +14,7 @@ sh 'npm config fix'
 sh 'npm install'
 sh 'npm i sonarqube-scanner'
 sh 'npm run sonar'
+sh 'npm publish'
 
 
 }
