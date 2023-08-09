@@ -8,12 +8,9 @@ node {
     stage('Build') {
         nodejs(nodeJSInstallationName: 'nodejs16.13.0') {
             
-            sh 'npm config fix'
-            sh 'npm install'
-         
-             sh "npm publish"
-           // sh'''docker build -t nhs:app . 
-             //   docker run -dp 9090:3000 nhs:app'''
+           sh'''docker rm -f nhs:app
+               docker build -t nhs:app . 
+               docker run -dp 9090:3000 nhs:app'''
             
             
 
