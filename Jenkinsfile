@@ -10,6 +10,7 @@ node {
             sh 'npm install -g npm'
             sh 'npm config fix'
             sh 'npm install'
+            sh "npm pack"
             sh 'npm i sonarqube-scanner'
             sh 'npm run sonar'
 
