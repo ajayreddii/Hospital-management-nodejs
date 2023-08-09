@@ -9,6 +9,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
+    {
+  "name": "sonar-scanner",
+  "version": "3.1.0",
+  "description": "Wrap sonar-scanner as a node module",
+  "keywords": [
+    "sonar",
+    "scanner"
+  ],
     "sonar": "node sonar-project.js"
   },
   "engines": {
