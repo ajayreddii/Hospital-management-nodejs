@@ -14,7 +14,8 @@ sh 'npm config fix'
 sh 'npm install'
 sh 'npm i sonarqube-scanner'
 sh 'npm run sonar'
-sh 'npm publish'
+sh 'npm publish --registry=http://18.221.2.79:8081/repository/nodejs-repo/ --force --_auth=afbdd084-cdd8-3149-888c-5b10963cbf97
+'
 
 
 }
