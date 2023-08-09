@@ -10,11 +10,6 @@ node {
             
             sh 'npm config fix'
             sh 'npm install'
-            sh  '''npm config set //18.221.2.79:8081/repository/nodejs-repo/:_authToken YWRtaW46YWRtaW4xMjM=
-                   npm config get registry
-                   npm config set registry http://18.221.2.79:8081/repository/nodejs-repo/
-                                                                                          '''
-
             sh "npm publish"
             
 
