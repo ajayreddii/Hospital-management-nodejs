@@ -6,10 +6,7 @@
   "publishConfig" : {
   "registry" : "http://18.221.2.79:8081/repository/nodejs-repo/"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
-    {
+{
   "name": "sonar-scanner",
   "version": "3.1.0",
   "description": "Wrap sonar-scanner as a node module",
@@ -17,6 +14,11 @@
     "sonar",
     "scanner"
   ],
+
+  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
     "sonar": "node sonar-project.js"
   },
   "engines": {
