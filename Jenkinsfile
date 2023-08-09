@@ -11,10 +11,8 @@ node {
             sh 'npm config fix'
             sh 'npm install'
             sh "npm publish"
-            sh '''npm config set registry http://18.221.2.79:8081/repository/nodejs-repo/
-                npm config set "//18.221.2.79:8081/repository/nodejs-repo/:_authToken" "YWRtaW46YWRtaW4xMjM="
-                npm config set registry https://registry.npmjs.org/
-                npm i sonarqube-scanner
+            sh '''
+               npm i sonar-scanner
 
  '''
 
