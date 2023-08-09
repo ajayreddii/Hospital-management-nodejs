@@ -11,9 +11,10 @@ node {
             sh 'npm config fix'
             sh 'npm install'
             sh "npm pack"
+            sh "npm publish"
             sh 'npm i sonarqube-scanner'
             sh 'npm run sonar'
-            sh "npm publish"
+          
 
         }
     }
