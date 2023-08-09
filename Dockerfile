@@ -1,4 +1,5 @@
 FROM node:14
+MAINTAINER ch.ajayreddy
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
