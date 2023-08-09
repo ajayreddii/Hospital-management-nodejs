@@ -12,11 +12,10 @@ node {
             sh 'npm install'
             sh "npm publish"
             sh '''
-               npm i sonar-scanner
+              node sonar-project.js
 
  '''
 
-            sh "npm run sonar"
             
           
 
