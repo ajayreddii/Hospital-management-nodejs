@@ -10,7 +10,7 @@ node {
             
             sh 'npm config fix'
             sh 'npm install'
-            sh 'npm config set httpd://18.221.2.79:8081/repository/nhs.repo/:_authToken=YWRtaW46YWRtaW4xMjM='
+         
              sh "npm publish"
            // sh'''docker build -t nhs:app . 
              //   docker run -dp 9090:3000 nhs:app'''
