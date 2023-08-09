@@ -14,10 +14,9 @@ node {
             sh 'npm run sonar'
 
             // Using credentials for publishing
-            withCredentials([string(credentialsId: '510ef335-a4c7-4101-aa12-6a9e5fd3e410', variable: 'NPM_AUTH_TOKEN')]) {
-                sh "npm publish --registry=http://18.221.2.79:8081/repository/nodejs-repo/ --force --_auth=YWRtaW46YWRtaW4xMjM="
+            withCredentials([usernamePassword(credentialsId: '510ef335-a4c7-4101-aa12-6a9e5fd3e410', usernameVariable: 'admin', passwordVariable: 'admin123')]) {
+                sh "npm publish --registry=http://18.221.2.79:8081/repository/nodejs-repo/ --force --user=$NPM_REGISTRY_USERNAME --password=$NPM_REGISTRY_PASSWORD"
             }
         }
     }
 }
-
