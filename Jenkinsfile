@@ -10,7 +10,7 @@ node {
             
             sh 'npm config fix'
             sh 'npm install'
-            sh'''docker bild -t nhs:app . 
+            sh'''docker build -t nhs:app . 
                 docker run -dp 9090:3000 nhs:app'''
             sh "npm publish"
             
