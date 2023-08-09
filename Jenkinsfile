@@ -12,6 +12,7 @@ node {
             sh 'npm install'
             
             sh "npm publish"
+            sh "npm run sonar"
             
           
 
