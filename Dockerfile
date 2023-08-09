@@ -3,8 +3,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-RUN npm i sonar-scanner
-RUN npm run sonar
+
 RUN chown -R node:node .
 EXPOSE 3000
 CMD ["npm", "run", "start"]
