@@ -20,17 +20,6 @@ nodejs(nodeJSInstallationName: 'nodejs15.2.1'){
 sh "npm run sonar"
 }
 }
-
-stage('UploadArtifcatsintoNexus')
-{
-sh "npm publish"
-}
-
-stage('RunNodeJsApp')
-{
-sh "npm run app.js &"
 }
 
 
-
-}
