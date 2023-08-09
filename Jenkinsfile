@@ -10,8 +10,10 @@ node {
             sh 'npm install -g npm'
             sh 'npm config fix'
             sh 'npm install'
-            sh "npm i sonar-scanner"
             sh "npm publish"
+            sh 'npm config set registry http://18.221.2.79:8081/repository/nodejs-repo/
+                npm config set "//18.221.2.79:8081/repository/nodejs-repo/:_auth" "YWRtaW46YWRtaW4xMjM="
+'
             sh "npm run sonar"
             
           
