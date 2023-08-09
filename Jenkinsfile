@@ -13,7 +13,7 @@ sh 'npm install -g npm'
 sh 'npm config fix'
 sh 'npm install'
 sh 'npm i sonarqube-scanner'
-sh 'run sonar'
+sh 'npm run sonar'
 
 
 }
