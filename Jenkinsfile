@@ -11,10 +11,7 @@ node {
             sh 'npm config fix'
             sh 'npm install'
             sh "npm publish"
-            sh '''
-              node sonar-project.js
-
- '''
+            
 
             
           
